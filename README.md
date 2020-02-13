@@ -32,7 +32,10 @@ The software is only allowed to be run on a Linux operation system. Please be su
 
 2. **install DeepHelicon**
 
-    To obtain the latest version of DeepHelicon, do
+    * To download a released package of DeepHelicon stable version in tab `releases`.
+    
+
+    * To obtain the latest version of DeepHelicon (download the prediction models in tab `releases`), do
     ```
     git clone https://github.com/2003100127/deeptmcon.git
     ```
@@ -121,4 +124,4 @@ J. Sun. D. Frishman. DeepHelicon: xxxxxxxxxxx.
 ## Contact
 If you have any problem in using it, please feel free to contact
 > jianfeng.sunmt{[({at})]}gmail.com
-> jianfeng.sun{[({at})]}tum.
+> jianfeng.sun{[({at})]}tum.de
