@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/DeepHelicon-executable-519dd9.svg)
 ![](https://img.shields.io/badge/last_released_date-Feb_2020-green.svg)
 
-###### tags: `transmembrane protein` `v0.1`
+###### tags: `residue contact predictor` `inter-helical contacts` `transmembrane protein` `v1.0`
 
 ## Overview
 DeepHelicon is a predictor for precisely predicting inter-helical residue contacts in transmembrane proteins. This repository is a standalone package of DeepHelicon. Apart from the package, we will consider a [webserver](https://) for DeepHelicon to develop.
@@ -62,7 +62,7 @@ The software is only allowed to be run on a Linux operation system. Please be su
         ```
         ./troll.sh -n 2wsc -c 2 -i ./input/
         ```
-    * description
+    * parameters
 	    * required
         ```
         -n --name -> a sequence name.
@@ -73,11 +73,13 @@ The software is only allowed to be run on a Linux operation system. Please be su
 2. **`src/gdca.julia`**
     
     * description
+        
         gdca.julia is used to generate Gaussian DCA file. You'd better run it cf. https://github.com/carlobaldassi/GaussDCA.jl.
         
 3. **`run_deephelicon.py`**
     
     * description
+        
         If you have the feature files shown in the `input/` directory, you can skip over steps 1-2 to step 3. We tested this step in a rigorous way. Be sure of every feature file already in the `input/` or your preferred input file path. Before start, an available `EVcouplings` tool must be configured with our program properly. Finally, it works easily like this. 
     
 	* python commands
@@ -89,7 +91,7 @@ The software is only allowed to be run on a Linux operation system. Please be su
         ```
         python run_deephelicon.py -n 2wsc -c 2 -i ./input/ -o ./output/
         ```
-	* description
+	* parameters
 	    * required
         ```
         -n --name -> a sequence name.
