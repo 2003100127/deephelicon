@@ -1,0 +1,10 @@
+# ingore folder
+protein/
+model/s1
+model/s2i1
+model/s2i2
+model/s2i3
+model/s2i4
+input/2wsc2.params
+.idea/
+__pycache__/
