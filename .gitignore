@@ -5,6 +5,16 @@ model/s2i1
 model/s2i2
 model/s2i3
 model/s2i4
+input/2wsc2.fs1
+input/2wsc2.fs2i1
+input/2wsc2.fs2i2
+input/2wsc2.fs2i3
+input/2wsc2.fs2i4
+output/2wsc2.dhcs1
+output/2wsc2.dhcs2i1
+output/2wsc2.dhcs2i2
+output/2wsc2.dhcs2i3
+output/2wsc2.dhcs2i4
 input/2wsc2.params
 .idea/
 __pycache__/

@@ -223,5 +223,6 @@ format_dhc_rs().do(
     file_chain=seq_chain,
     file_paths=file_paths,
     file_suffixs=file_suffixs,
+    tmhmm_path=input_path,
     sv_fp=output_path,
 )
