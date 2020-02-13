@@ -3,4 +3,4 @@ biopython==1.74
 numpy==1.16.4
 pandas==0.25.0
 tensorboard==1.11.0
-tensorflow-gpu==1.11.0
+tensorflow-gpu==1.15.2
