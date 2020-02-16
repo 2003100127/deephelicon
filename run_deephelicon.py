@@ -21,8 +21,8 @@ def usage():
     Usage: run_deephelicon.py [-n|--name, [sequence name']] [-c|--chain, [sequence chain name]] [-i|--input, [input path]] [-o|--output, [output path]] [-h|--help] [-v|--version]
 
     Description
-                -n, --name      Sequence name
-                -c, --chain     Sequence chain name.
+                -n, --name      Sequence name. For example, '2wsc'.
+                -c, --chain     Sequence chain name. For example, '2'. This can be empty if you prefer a sequnce name like '2wsc2' or '0868'.
                 -i, --input     Input path.
                 -o, --output    Output path.
 

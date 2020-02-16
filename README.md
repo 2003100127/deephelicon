@@ -104,13 +104,6 @@ The software is only allowed to be run on a Linux operation system. Please be su
 	* format
 	  This predictor returns predictions of inter-helical residue contacts in tansmembrane proteins. If non-transmembrane segment or <1 transmembrane segment is detected, the programe will not return final results. However, you can still utilize the intermediate results at stage 1 and 2 as stated in the paper. Considering <1 helix detection by inside transmembrane topology predictor, we will consider extending our module to generate a file including entire results in the future work.
     * example
-	  
-      ```mermaid
-        graph LR
-        A[position1] -->B[amino acid 1]
-            B --> C[position2]
-            C --> D[amino acid 2]
-        ```
       
       ```
           1          Y         6	     F  	 0.08136672
@@ -124,6 +117,4 @@ The software is only allowed to be run on a Linux operation system. Please be su
 J. Sun. D. Frishman. DeepHelicon: xxxxxxxxxxx.
 
 ## Contact
-If you have any problem in using it, please feel free to contact
-> jianfeng.sunmt{[({at})]}gmail.com
-> jianfeng.sun{[({at})]}tum.de
+If you have any problem in using it, please feel free to contact [Jianfeng Sun](mailto:jianfeng.sunmt@gmail.com;jianfeng.sun{at}tum.de).
