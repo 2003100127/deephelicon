@@ -2,10 +2,10 @@
 ![](https://img.shields.io/badge/DeepHelicon-executable-519dd9.svg)
 ![](https://img.shields.io/badge/last_released_date-Feb_2020-green.svg)
 
-###### tags: `residue contact predictor` `inter-helical contacts` `transmembrane protein` `v1.0`
+###### tags: `transmembrane protein` `residue contact predictor` `inter-helical contacts` `v1.0`
 
 ## Overview
-DeepHelicon is a predictor for precisely predicting inter-helical residue contacts in transmembrane proteins. This repository is a standalone package of DeepHelicon. Apart from the package, we will consider a [webserver](https://) for DeepHelicon to develop.
+DeepHelicon is a predictor for accurately predicting inter-helical residue contacts in transmembrane proteins. This repository provides a standalone package of DeepHelicon.
 
 ## System Requirement
     
@@ -48,7 +48,7 @@ The software is only allowed to be run on a Linux operation system. Please be su
 
 ## Usage
 
-1. **`src/troll.sh`**
+1. part 1 of feature generation via **`src/troll.sh`**
 
     * description
         troll.sh is used to generate transmembrane topologies and most of evolutionary coupling features, including CCMpred, EVfold, plmDCA.
@@ -70,13 +70,13 @@ The software is only allowed to be run on a Linux operation system. Please be su
         -i --input -> input path
         ```
 
-2. **`src/gdca.julia`**
+2. part 1 of feature generation via **`src/gdca.julia`**
     
     * description
         
         gdca.julia is used to generate Gaussian DCA file. You'd better run it cf. https://github.com/carlobaldassi/GaussDCA.jl.
         
-3. **`run_deephelicon.py`**
+3. prediction via **`run_deephelicon.py`**
     
     * description
         
@@ -100,21 +100,17 @@ The software is only allowed to be run on a Linux operation system. Please be su
         -o --output --> prediction results
         ```
 
-2. description of output file
+2. description of an output file
 	* format
 	  This predictor returns predictions of inter-helical residue contacts in tansmembrane proteins. If non-transmembrane segment or <1 transmembrane segment is detected, the programe will not return final results. However, you can still utilize the intermediate results at stage 1 and 2 as stated in the paper. Considering <1 helix detection by inside transmembrane topology predictor, we will consider extending our module to generate a file including entire results in the future work.
-    * example
-      
-      ```
-          1          Y         6	     F  	 0.08136672
-          |          |         |         |            |
-          |          |         |         |            |
-      position1      |     position2     |       prediction score   
-              amino acid 1         amino acid 2           
-      ```
+    * example (file format of a prediction file`example.deephelicon`)
+	  
+      ![](https://imgur.com/y26s3Rm.png)
 
 ## How to cite
-J. Sun. D. Frishman. DeepHelicon: xxxxxxxxxxx.
+Sun, J., Frishman, D., DeepHelicon: accurate prediction of inter-helical residue contacts in transmembrane proteins by residual neural networks.
 
 ## Contact
-If you have any problem in using it, please feel free to contact [Jianfeng Sun](mailto:jianfeng.sunmt@gmail.com;jianfeng.sun{at}tum.de).
+If you have any problem in using it, please feel free to contact
+> jianfeng.sunmt{[({at})]}gmail.com
+> jianfeng.sun{[({at})]}tum.de
