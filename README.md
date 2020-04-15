@@ -70,7 +70,7 @@ The software is only allowed to be run on a Linux operation system. Please be su
         -i --input -> input path
         ```
 
-2. part 1 of feature generation via **`src/gdca.julia`**
+2. part 2 of feature generation via **`src/gdca.julia`**
     
     * description
         
