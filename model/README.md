@@ -1,0 +1,1 @@
+Please download the prediction models of DeepHelicon in tab `releases`, and then put all models in the folder `./model/`
