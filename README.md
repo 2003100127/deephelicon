@@ -19,7 +19,7 @@ The software is only allowed to be run on a Linux operation system. Please be su
     * [Gaussian DCA](https://github.com/carlobaldassi/GaussDCA.jl) - predictor of residue contacts
     * [Freecontact](https://rostlab.org/owiki/index.php/FreeContact) - predictor of residue contacts
     * [plmDCA](https://github.com/debbiemarkslab/plmc) - predictor of residue contacts
-    * [TMHMM](http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?tmhmm) - predictor of transmembrane segments
+    * [TMHMM2.0](https://services.healthtech.dtu.dk/software.php) - predictor of transmembrane segments
     * [EVcouplings](https://github.com/debbiemarkslab/EVcouplings) - python interface used for predicting protein structure, function and mutations using evolutionary sequence covariation
     * [Uniprot database](http://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/old-releases/) - a curated protein sequence database for hhblits
     
