@@ -18,23 +18,24 @@ def usage():
     return """
     DeepHelicon: prediction of inter-helical residue contacts in transmembrane protein.
 
-    Usage: run_deephelicon.py [-n|--name, [sequence name']] [-c|--chain, [sequence chain name]] [-i|--input, [input path]] [-o|--output, [output path]] [-h|--help] [-v|--version]
+    Usage: run_deephelicon.py [-n|--name, [sequence name']] [-c|--chain, [sequence chain name]] [-i|--input, [input path]] [-o|--output, [output path]] [-f|--format, [format of output file]] [-h|--help] [-v|--version]
 
     Description
-                -n, --name      Sequence name. For example, '2wsc'.
-                -c, --chain     Sequence chain name. For example, '2'. This can be empty if you prefer a sequnce name like '2wsc2' or '0868'.
+                -n, --name      Protein name of a FASTA file. For example, '2wsc'. Note, the FASTA file you are providing should have the suffix '.fasta'. For example, a whole FASTA file name can be '2wsc2.fasta' or a CASP name 'T1024.fasta'.
+                -c, --chain     Chain name of a FASTA file. For example, '2'. This can be empty if you prefer a name of the input FASTA file like '2wsc2' or a CASP name 'T1024'.
                 -i, --input     Input path.
                 -o, --output    Output path.
+                -f, --format    Format of output file, 'Normal' or 'CASP14' (see https://predictioncenter.org/casp14/index.cgi?page=format#RR).
 
     for example:
-    python run_deephelicon.py -n 2wsc -c 2 -i ./input/ -o ./output/
+    python run_deephelicon.py -n 2wsc -c 2 -i ./input/ -o ./output/ -f CASP14
 
     """
 
 
 def parser():
-    opts, args = getopt.getopt(sys.argv[1:], '-h-n:-c:-i:-o:-v',
-                               ['help', 'name=', 'chain=', 'input=', 'output=', 'version'])
+    opts, args = getopt.getopt(sys.argv[1:], '-h-n:-c:-i:-o:-f:-v',
+                               ['help', 'name=', 'chain=', 'input=', 'output=', 'format=', 'version'])
     # print(opts)
     for opt_name, opt_value in opts:
         if opt_name in ('-h', '--help'):
@@ -50,16 +51,19 @@ def parser():
             input = opt_value
         if opt_name in ('-o', '--output'):
             output = opt_value
+        if opt_name in ('-f', '--format'):
+            format_rr = opt_value
         # else:
         #     print('wrong usage.')
         #     sys.exit(0)
-    return seq_name, seq_chain, input, output
+    return seq_name, seq_chain, input, output, format_rr
 
-seq_name, seq_chain, input_path, output_path = parser()
+seq_name, seq_chain, input_path, output_path, format_rr = parser()
 # seq_name = '2wsc'
 # seq_chain = '2'
 # input_path = 'input/'
 # output_path = 'output/'
+# format_rr = 'CASP14'
 
 print('generating features in stage 1...')
 fstage1 = {
@@ -225,4 +229,5 @@ format_dhc_rs().do(
     file_suffixs=file_suffixs,
     tmhmm_path=input_path,
     sv_fp=output_path,
+    format_=format_rr,
 )
