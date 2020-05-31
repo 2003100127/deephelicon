@@ -120,11 +120,17 @@ The software is only allowed to be run on a Linux operation system. Please be su
         ```
 
 2. description of an output file
+
 	* format
-	  This predictor returns predictions of inter-helical residue contacts in tansmembrane proteins. If non-transmembrane segment or <1 transmembrane segment is detected, the programe will not return final results. However, you can still utilize the intermediate results at stage 1 and 2 as stated in the paper. Considering <1 helix detection by inside transmembrane topology predictor, we will consider extending our module to generate a file including entire results in the future work.
-    * example (file format of a prediction file`example.deephelicon`)
+	  This predictor returns predictions of inter-helical residue contacts in tansmembrane proteins. If non-transmembrane segment or <1 transmembrane segment is detected, the programe will not return final results. However, you can still utilize the intermediate results at stage 1 and 2 as stated in the paper. Considering <1 helix detection by inside transmembrane topology predictor, we will consider extending our module to generate a file including entire results in the future work. The DeepHelicon provides two formats of output file illustrated by the two examples below (see one file format of a output file `./output/2wsc2.deephelicon`).
+      
+    * example in 'Normal' format
 	  
       ![](https://i.imgur.com/lCPvY1n.png)
+      
+    * example in 'CASP14' format
+
+        see [CASP14 format](https://predictioncenter.org/casp14/index.cgi?page=format#RR)
 
 ## How to cite
 Sun, J., Frishman, D., DeepHelicon: accurate prediction of inter-helical residue contacts in transmembrane proteins by residual neural networks.
