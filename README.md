@@ -32,10 +32,12 @@ The software is only allowed to be run on a Linux operation system. Please be su
 
 2. **install DeepHelicon**
 
-    * To download a released package of DeepHelicon stable version in tab `releases`.
+    * To download a released package of DeepHelicon stable version, click [`here`](https://github.com/2003100127/deephelicon/releases).
+    
+    * To download all prediction models of DeepHelicon click [`here`](https://github.com/2003100127/deephelicon/releases).
     
 
-    * To obtain the latest version of DeepHelicon (download the prediction models in tab `releases`), do
+    * To obtain the latest version of DeepHelicon, do
     ```
     git clone https://github.com/2003100127/deeptmcon.git
     ```
@@ -52,6 +54,9 @@ The software is only allowed to be run on a Linux operation system. Please be su
 
     * description
         troll.sh is used to generate transmembrane topologies and most of evolutionary coupling features, including CCMpred, EVfold, plmDCA.
+        
+    * name format of a FASTA file
+        Note, the FASTA file you are providing should have the suffix '.fasta'. For example, a whole FASTA file name can be '2wsc2.fasta' or a CASP name 'T1024.fasta'.
 
     * shell commands
         * general
@@ -65,9 +70,13 @@ The software is only allowed to be run on a Linux operation system. Please be su
     * parameters
 	    * required
         ```
-        -n --name -> a sequence name.
-        -c --chain -> a chain name
-        -i --input -> input path
+        -n --name -> protein name.
+        -i --input -> input path.
+        ```
+        
+        * optional
+        ```
+        -c --chain -> chain name. Chain name of a FASTA file. For example, '2'. This can be empty if you prefer a name of the input FASTA file like '2wsc2' or a CASP name 'T1024'.
         ```
 
 2. part 1 of feature generation via **`src/gdca.julia`**
@@ -85,19 +94,29 @@ The software is only allowed to be run on a Linux operation system. Please be su
 	* python commands
 	    * general
 	    ```
-        python run_deephelicon.py -n NAME -c CHAIN -i /YOUR/input/PATH/ -o /YOUR/OUTPUT/PATH/
+        python run_deephelicon.py -n NAME -c CHAIN -i /YOUR/input/PATH/ -o /YOUR/OUTPUT/PATH/ -f FORMAT
         ```
 	    * example
         ```
-        python run_deephelicon.py -n 2wsc -c 2 -i ./input/ -o ./output/
+        python run_deephelicon.py -n 2wsc -c 2 -i ./input/ -o ./output/ -f 'Normal'
         ```
 	* parameters
 	    * required
         ```
-        -n --name -> a sequence name.
-        -c --chain -> a chain name
-        -i --input -> input path
-        -o --output --> prediction results
+        -n --name -> protein name.
+        -i --input -> input path.
+        -o --output --> prediction results.
+        -f --format --> Format of a output file, 'Normal' or 'CASP14'.
+        ```
+        
+        * optional
+
+        ```
+        -c --chain -> chain name. Chain name of a FASTA file. For example, '2'. This can be empty if you prefer a name of the input FASTA file like '2wsc2' or a CASP name 'T1024'.
+        ```
+        * see detail
+        ```
+        python run_deephelicon.py -h
         ```
 
 2. description of an output file
