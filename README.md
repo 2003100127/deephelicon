@@ -39,7 +39,7 @@ The software is only allowed to be run on a Linux operation system. Please be su
 
     * To obtain the latest version of DeepHelicon, do
     ```
-    git clone https://github.com/2003100127/deeptmcon.git
+    git clone https://github.com/2003100127/deephelicon.git
     ```
 
 3. **install python dependencies**
