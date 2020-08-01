@@ -133,7 +133,7 @@ The software is only allowed to be run on a Linux operation system. Please be su
         see [CASP14 format](https://predictioncenter.org/casp14/index.cgi?page=format#RR)
 
 ## How to cite
-Sun, J., Frishman, D., DeepHelicon: accurate prediction of inter-helical residue contacts in transmembrane proteins by residual neural networks.
+Sun, J., Frishman, D. (2020). DeepHelicon: accurate prediction of inter-helical residue contacts in transmembrane proteins by residual neural networks. ***J. Struct. Biol.***, vol. 212. 107574. doi:[10.1016/j.jsb.2020.107574](https://doi.org/10.1016/j.jsb.2020.107574)
 
 ## Contact
 If you have any problem in using it, please feel free to contact
