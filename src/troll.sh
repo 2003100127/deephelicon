@@ -1,14 +1,23 @@
 #!/usr/bin/env bash
 # SET PATH OF EXECUTABLES
-CCMPRED='PATH/TO/CCMPRED'
-FREECONTACT='PATH/TO/FREECONTACT'
-PLMDCA='PATH/TO/PLMDCA'
-GDCA='PATH/TO/GDCA'
-HHBLITS='PATH/TO/HHBLITS'
+#CCMPRED='PATH/TO/CCMPRED'
+#FREECONTACT='PATH/TO/FREECONTACT'
+#PLMDCA='PATH/TO/PLMDCA'
+#GDCA='PATH/TO/GDCA'
+#HHBLITS='PATH/TO/HHBLITS'
+
+CCMPRED='/home/students/j.sun/store/CCMpred/bin/ccmpred'
+FREECONTACT='/home/software/BioInformatics/Fedora28/bin/freecontact'
+PLMDCA='/home/students/j.sun/store/plmc/bin/plmc'
+GDCA='/home/students/j.sun/store/PconsC3/rungdca.py'
+HHBLITS='/home/students/j.sun/store/hhblits/bin/hhblits'
 
 # SET PATH OF DIRECTORIES
-DB='PATH/TO/HHBLITS/DB'
-TMHMM='PATH/TO/TMHMM/ROOT_DIRECTORY/'
+#DB='PATH/TO/HHBLITS/DB'
+#TMHMM='PATH/TO/TMHMM/ROOT_DIRECTORY/'
+
+DB='/home/students/j.sun/store/uniprot20_2016_02/uniprot20_2016_02'
+TMHMM='/home/students/j.sun/store/software/tmhmm-2.0c/'
 
 while getopts ":n:c:i:" opt
 do
