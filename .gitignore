@@ -1,7 +1,8 @@
 # ingore folder
 data/
 deephelicon/convert.py
-docs/
+docs/*
+docs/img/!deephelicon-logo.png
 
 .idea/
 __pycache__/
