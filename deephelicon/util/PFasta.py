@@ -1,24 +1,19 @@
 __author__ = "Jianfeng Sun"
-__version__ = "v1.0"
-__copyright__ = "Copyright 2020"
-__license__ = "GPL v3.0"
+__version__ = "0.0.1"
+__copyright__ = "Copyright 2025"
+__license__ = "GPL-3.0"
 __email__ = "jianfeng.sunmt@gmail.com"
 __maintainer__ = "Jianfeng Sun"
 
-import sys
-sys.path.append('../')
-from src.Kind_dhc_rs import kind_dhc_rs
-from src.Index_dhc_rs import index_dhc_rs
 
-
-class fasta_dhc_rs(object):
+class PFasta:
 
     def __init__(self, sequence):
         self.sequence = sequence
         self.len_seq = len(self.sequence)
 
     def pair(self, pos_list):
-        seq_dict = kind_dhc_rs().todict(self.sequence)
+        seq_dict = self.todict(self.sequence)
         len_pairs = len(pos_list)
         dist_matrix = []
         for i in range(len_pairs):
@@ -34,3 +29,10 @@ class fasta_dhc_rs(object):
                 0
             ])
         return dist_matrix
+
+    def todict(self, seq):
+        seq_dict = {}
+        len_seq = len(seq)
+        for i in range(len_seq):
+            seq_dict[i + 1] = seq[i]
+        return seq_dict

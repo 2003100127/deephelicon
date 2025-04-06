@@ -1,22 +1,20 @@
 __author__ = "Jianfeng Sun"
-__version__ = "v1.0"
-__copyright__ = "Copyright 2020"
-__license__ = "GPL v3.0"
+__version__ = "0.0.1"
+__copyright__ = "Copyright 2025"
+__license__ = "GPL-3.0"
 __email__ = "jianfeng.sunmt@gmail.com"
 __maintainer__ = "Jianfeng Sun"
 
-import sys
 import pandas as pd
-sys.path.append('../')
-from src import BPair_dhc_rs as tt
-from src.Reader_dhc_rs import reader_dhc_rs
-from src.Separation_dhc_rs import separation_dhc_rs as ppssep
+from deephelicon.util.BPair import BPair
+from deephelicon.util.Reader import Reader as pfreader
+from deephelicon.util.Separation import Separation as ppssep
 
 
-class irreflexive_dhc_rs(tt.pair_dhc_rs):
+class Irreflexive(BPair):
 
     def __init__(self, sequence=None, window_size=None, window_aa_ids=None, kind='memconp', patch_size=None):
-        super(irreflexive_dhc_rs, self).__init__(sequence, window_size, window_aa_ids)
+        super(Irreflexive, self).__init__(sequence, window_size, window_aa_ids)
         if kind == 'memconp':
             self.to_dos = [
                 [4, -4], [4, 4], [3, -4], [-4, 3], [3, 4],
@@ -28,7 +26,7 @@ class irreflexive_dhc_rs(tt.pair_dhc_rs):
         if kind == 'patch':
             self.to_dos = self.patch(length=patch_size)
         self.num_to_dos = len(self.to_dos)
-        self.reader_dhc_rs = reader_dhc_rs()
+        self.pfreader = pfreader()
 
     def pairIds(self):
         n = len(self.sequence)
@@ -192,7 +190,7 @@ class irreflexive_dhc_rs(tt.pair_dhc_rs):
 
     def mi(self, mi_path, file_name, file_chain, sort_=0):
         self.__sort_ = sort_
-        results = self.reader_dhc_rs.generic(
+        results = self.pfreader.generic(
             mi_path + file_name + file_chain + '.evfold',
             df_sep='\s+',
             is_utf8=True
@@ -216,7 +214,7 @@ class irreflexive_dhc_rs(tt.pair_dhc_rs):
 
     def freecontact(self, fc_path, file_name, file_chain, sort_=0):
         self.__sort_ = sort_
-        results = self.reader_dhc_rs.generic(
+        results = self.pfreader.generic(
             fc_path + file_name + file_chain + '.evfold',
             df_sep='\s+',
             is_utf8=True
@@ -240,7 +238,7 @@ class irreflexive_dhc_rs(tt.pair_dhc_rs):
 
     def ccmpred(self, cp_path, file_name, file_chain, sort_=0):
         self.__sort_ = sort_
-        file_results = self.reader_dhc_rs.generic(
+        file_results = self.pfreader.generic(
             cp_path + file_name + file_chain + '.ccmpred',
             df_sep='\s+',
             is_utf8=True
@@ -267,7 +265,7 @@ class irreflexive_dhc_rs(tt.pair_dhc_rs):
 
     def gdca(self, gdca_path, file_name, file_chain, sort_=0):
         self.__sort_ = sort_
-        results = self.reader_dhc_rs.generic(
+        results = self.pfreader.generic(
             gdca_path + file_name + file_chain + '.gdca',
             df_sep='\s+',
             is_utf8=True
@@ -288,7 +286,7 @@ class irreflexive_dhc_rs(tt.pair_dhc_rs):
 
     def plmc(self, plmc_path, file_name, file_chain, sort_=0):
         self.__sort_ = sort_
-        results = self.reader_dhc_rs.generic(
+        results = self.pfreader.generic(
             plmc_path + file_name + file_chain + '.plmc',
             df_sep='\s+',
             is_utf8=True
@@ -312,7 +310,7 @@ class irreflexive_dhc_rs(tt.pair_dhc_rs):
 
     def dhc(self, dhc_path, file_name, file_chain, file_suffix, pair_list=None, sort_=0):
         self.__sort_ = sort_
-        results = self.reader_dhc_rs.generic(
+        results = self.pfreader.generic(
             dhc_path + file_name + file_chain + file_suffix,
             df_sep='\t',
             is_utf8=True

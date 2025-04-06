@@ -1,23 +1,16 @@
 __author__ = "Jianfeng Sun"
-__version__ = "v1.0"
-__copyright__ = "Copyright 2020"
-__license__ = "GPL v3.0"
+__version__ = "0.0.1"
+__copyright__ = "Copyright 2025"
+__license__ = "GPL-3.0"
 __email__ = "jianfeng.sunmt@gmail.com"
 __maintainer__ = "Jianfeng Sun"
 
-import sys
 import numpy as np
-sys.path.append('../')
-from src.Reader_dhc_rs import reader_dhc_rs
 
 
-class dataInitializer_dhc_rs(object):
+class DataInitializer:
 
-    def __init__(self):
-        pass
-
-    def input2d(self, data_path, bound_inf=None, bound_sup=None, sep='\t'):
-        data = np.array(reader_dhc_rs().generic(data_path, df_sep=sep))
+    def input2d(self, data, bound_inf=None, bound_sup=None, ):
         shape = data.shape
         num_samples = shape[0]
         num_features = shape[1]

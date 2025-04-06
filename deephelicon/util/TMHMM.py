@@ -1,21 +1,15 @@
 __author__ = "Jianfeng Sun"
-__version__ = "v1.0"
-__copyright__ = "Copyright 2020"
-__license__ = "GPL v3.0"
+__version__ = "0.0.1"
+__copyright__ = "Copyright 2025"
+__license__ = "GPL-3.0"
 __email__ = "jianfeng.sunmt@gmail.com"
 __maintainer__ = "Jianfeng Sun"
 
-import sys
-sys.path.append('../')
 import re
 import linecache
-from src.Reader_dhc_rs import reader_dhc_rs
 
 
-class tmhmm_dhc_rs(object):
-
-    def __init__(self, ):
-        self.pfreader = reader_dhc_rs()
+class TMHMM:
 
     def read(self, file_path):
         arr = self.format(file_path)
