@@ -15,7 +15,7 @@
 ![PyPI](https://img.shields.io/badge/-PyPI-000?&logo=PyPI)
 
 ## 🧭 Overview
-DeepHelicon is a deep learning-based approach that accurately predicts inter-helical residue contacts in transmembrane proteins by utilising coevolutionary features and a two-stage deep learning framework to refine contact maps.
+DeepHelicon is a deep learning-based approach that accurately predicts inter-helical residue contacts in transmembrane proteins by utilising coevolutionary features and a two-stage deep learning framework to refine contact maps. 
 
 ## 📔 Documentation
 Please check https://2003100127.github.io/deephelicon for its usage.
