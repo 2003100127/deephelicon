@@ -1,7 +1,7 @@
 # ingore folder
 data/
 deephelicon/convert.py
-docs/
+# docs/
 .idea/
 
 # Byte-compiled / optimized / DLL files

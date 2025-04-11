@@ -1,0 +1,42 @@
+version: 1
+project:
+  id: 7266f43a-e17f-4c5b-8f8f-fa06bedeb27b
+  title: deephelicon
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/2003100127/deephelicon
+site:
+  template: book-theme
+  options:
+    favicon: img/deephelicon-logo.png
+    logo: img/deephelicon-logo.png
+    twitter: https://x.com/Jianfeng_Sunny
+    hide_toc: true
+    outline_maxdepth: 2
+  nav:
+    - title: Home
+      url: /index
+    - title: Spotlight
+      url: /spotlight
+    - title: Versions
+      url: /versions
+    - title: About
+      children:
+        - title: Developer
+          url: /developer
+        - title: Publication
+          url: /publication
+    - title: Tutorial
+      children:
+        - title: Installation
+          url: /installation
+        - title: Data
+          url: /data
+        - title: Model
+          url: /model
+        - title: Prediction
+          url: /prediction
+
+bibliography:
+  - jsun.bib
