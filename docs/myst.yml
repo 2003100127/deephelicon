@@ -38,7 +38,7 @@ site:
 #        - title: Prediction
 #          url: /prediction
     - title: Home
-      url: /index
+      url: /deephelicon/index
     - title: Spotlight
       url: /deephelicon/spotlight
     - title: Versions
