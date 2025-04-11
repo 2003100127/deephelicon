@@ -34,9 +34,9 @@ Please check https://2003100127.github.io/deephelicon for its usage.
 
 ## 📚 Citation
 
-```shell!
-Sun, J., & Frishman, D. (2020). DeepHelicon: Accurate prediction of inter-helical residue contacts in transmembrane proteins by residual neural networks. Journal of Structural Biology, 212(1), 107574. `10.1016/j.jsb.2020.107574`
-```
+Sun, J., & Frishman, D. (2020). DeepHelicon: Accurate prediction of inter-helical residue contacts in transmembrane proteins by residual neural networks. Journal of Structural Biology, 212(1), 107574. `10.1016/j.jsb.2020.107574
+
+In `.bib` form:
 
 ```markdown
 @article{deephelicon2020,
